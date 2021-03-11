@@ -16,7 +16,26 @@
 void sequential_oddeven_sort (uint64_t *T, const uint64_t size)
 {
     /* TODO: sequential implementation of odd-even sort */
+    uint64_t startIndex, i, temp, sorted;
 
+    
+    startIndex = 0;
+    do
+    {   
+        sorted = 1;
+        for(i = startIndex; i < size-1; i+=2)
+        {
+            if (T[i] > T[i+1])
+            {
+                temp = T[i+1];
+                T[i+1] = T[i];
+                T[i] = temp;
+
+                sorted = 0;
+            }
+        }
+        startIndex = 1 - startIndex;
+    } while (sorted == 0);
     return ;
 }
 
@@ -25,7 +44,40 @@ void parallel_oddeven_sort (uint64_t *T, const uint64_t size)
 {
 
     /* TODO: parallel implementation of odd-even sort */ 
+    uint64_t startIndex, i, temp, sorted, chunk_sz;
+    
+    chunk_sz = size / omp_get_max_threads();
+    // startIndex = 0;
+    do
+    {
+        sorted = 1;
+        #pragma omp parallel for private(temp)
+        for(i = 0; i < size-1; i+=2)
+        {
+            if (T[i] > T[i+1])
+            {
+                temp = T[i+1];
+                T[i+1] = T[i];
+                T[i] = temp;
 
+                sorted = 0;
+            }
+        }
+
+        #pragma omp parallel for private(temp)
+        for(i = 1; i < size-1; i+=2)
+        {
+            if (T[i] > T[i+1])
+            {
+                temp = T[i+1];
+                T[i+1] = T[i];
+                T[i] = temp;
+
+                sorted = 0;
+            }
+        }
+        // startIndex = 1 - startIndex;
+    } while (sorted == 0);
     return ;
 }
 
@@ -118,6 +170,7 @@ int main (int argc, char **argv)
         if (! is_sorted_sequence (X, N))
         {
             fprintf(stderr, "ERROR: the parallel sorting of the array failed\n") ;
+            print_array (X, N) ;
             exit (-1) ;
 	}
 #endif
