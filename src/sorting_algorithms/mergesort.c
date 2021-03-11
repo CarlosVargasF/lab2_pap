@@ -22,34 +22,34 @@ void merge (uint64_t *T, const uint64_t size)
   uint64_t k = 0 ;
   
   while ((i < size) && (j < 2*size))
+  {
+    if (T[i] < T [j])
+	  {
+      X [k] = T [i] ;
+      i = i + 1 ;
+	  }
+    else
     {
-      if (T[i] < T [j])
-	{
-	  X [k] = T [i] ;
-	  i = i + 1 ;
-	}
-      else
-	{
-	  X [k] = T [j] ;
-	  j = j + 1 ;
-	}
-      k = k + 1 ;
+      X [k] = T [j] ;
+      j = j + 1 ;
     }
+    k = k + 1 ;
+  }
 
   if (i < size)
+  {
+    for (; i < size; i++, k++)
     {
-      for (; i < size; i++, k++)
-	{
-	  X [k] = T [i] ;
-	}
+      X [k] = T [i] ;
     }
+  }
   else
+  {
+    for (; j < 2*size; j++, k++)
     {
-      for (; j < 2*size; j++, k++)
-	{
-	  X [k] = T [j] ;
-	}
+      X [k] = T [j] ;
     }
+  }
   
   memcpy (T, X, 2*size*sizeof(uint64_t)) ;
   free (X) ;
@@ -67,8 +67,35 @@ void merge (uint64_t *T, const uint64_t size)
 
 void sequential_merge_sort (uint64_t *T, const uint64_t size)
 {
-    /* TODO: sequential implementation of merge sort */ 
-    
+    /* sequential implementation of merge sort */ 
+
+    uint64_t temp;
+
+    // When only 2 elements remain
+    if(size==2)
+    {
+      // Swap elements if required
+      if(T[1] < T[0])
+      {
+        temp = T[1];
+        T[1] = T[0];
+        T[0] = temp;
+        return;
+      }
+      else
+      {
+        return;
+      }
+    }
+
+    // Divide into equal halves
+    sequential_merge_sort(T, size/2);
+    sequential_merge_sort(T+size/2, size/2);
+
+    // Merge the halves
+    merge(T, size/2);
+
+
     return ;
 }
 
@@ -98,7 +125,7 @@ int main (int argc, char **argv)
     /* the array to be sorted */
     uint64_t *X = (uint64_t *) malloc (N * sizeof(uint64_t)) ;
 
-    printf("--> Sorting an array of size %u\n",N);
+    printf("--> Sorting an array of size %lu\n",N);
 #ifdef RINIT
     printf("--> The array is initialized randomly\n");
 #endif
