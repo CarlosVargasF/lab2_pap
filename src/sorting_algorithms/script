@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# usage: ./script N
+
+LIMIT=$@
+
+for ((i=1;i<=LIMIT;i++));
+do
+    echo "N = 2^$i"
+    OMP_NUM_THREADS=16 ./mergesort.run "$i" >> logs_mergesort.txt
+    sleep 1s
+done
