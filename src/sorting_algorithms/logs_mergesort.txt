@@ -1,0 +1,1100 @@
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 2 (2^1)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		1.166667
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 4 (2^2)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		0.502890
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 8 (2^3)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		0.616613
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 16 (2^4)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		0.859397
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 32 (2^5)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		1.025754
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 64 (2^6)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		1.020891
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 128 (2^7)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		1.034244
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 256 (2^8)
+
+ mergesort serial 	0.03 Mcycles
+
+ mergesort parallel 	0.03 Mcycles
+
+ Speedup: 		1.046743
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 512 (2^9)
+
+ mergesort serial 	0.01 Mcycles
+
+ mergesort parallel 	0.01 Mcycles
+
+ Speedup: 		1.017895
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 1024 (2^10)
+
+ mergesort serial 	0.03 Mcycles
+
+ mergesort parallel 	0.03 Mcycles
+
+ Speedup: 		1.005667
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 2048 (2^11)
+
+ mergesort serial 	0.29 Mcycles
+
+ mergesort parallel 	0.28 Mcycles
+
+ Speedup: 		1.033492
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 4096 (2^12)
+
+ mergesort serial 	0.12 Mcycles
+
+ mergesort parallel 	0.12 Mcycles
+
+ Speedup: 		0.974781
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 8192 (2^13)
+
+ mergesort serial 	0.48 Mcycles
+
+ mergesort parallel 	0.41 Mcycles
+
+ Speedup: 		1.153074
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 16384 (2^14)
+
+ mergesort serial 	2.45 Mcycles
+
+ mergesort parallel 	1.29 Mcycles
+
+ Speedup: 		1.898830
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 32768 (2^15)
+
+ mergesort serial 	3.71 Mcycles
+
+ mergesort parallel 	1.78 Mcycles
+
+ Speedup: 		2.079930
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 65536 (2^16)
+
+ mergesort serial 	5.50 Mcycles
+
+ mergesort parallel 	2.59 Mcycles
+
+ Speedup: 		2.119900
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 131072 (2^17)
+
+ mergesort serial 	14.03 Mcycles
+
+ mergesort parallel 	5.07 Mcycles
+
+ Speedup: 		2.765142
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 262144 (2^18)
+
+ mergesort serial 	13.66 Mcycles
+
+ mergesort parallel 	11.13 Mcycles
+
+ Speedup: 		1.227824
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 524288 (2^19)
+
+ mergesort serial 	28.68 Mcycles
+
+ mergesort parallel 	35.77 Mcycles
+
+ Speedup: 		0.801629
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 1048576 (2^20)
+
+ mergesort serial 	57.83 Mcycles
+
+ mergesort parallel 	54.73 Mcycles
+
+ Speedup: 		1.056566
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 2097152 (2^21)
+
+ mergesort serial 	126.06 Mcycles
+
+ mergesort parallel 	122.31 Mcycles
+
+ Speedup: 		1.030658
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 4194304 (2^22)
+
+ mergesort serial 	274.93 Mcycles
+
+ mergesort parallel 	301.17 Mcycles
+
+ Speedup: 		0.912881
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 8388608 (2^23)
+
+ mergesort serial 	610.81 Mcycles
+
+ mergesort parallel 	576.66 Mcycles
+
+ Speedup: 		1.059215
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 16777216 (2^24)
+
+ mergesort serial 	1499.10 Mcycles
+
+ mergesort parallel 	1589.75 Mcycles
+
+ Speedup: 		0.942976
+================================================
+
+================================================
+ Max number of threads: 8 
+ --> Sorting an array of size 33554432 (2^25)
+
+ mergesort serial 	3877.17 Mcycles
+
+ mergesort parallel 	3869.58 Mcycles
+
+ Speedup: 		1.001960
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 2 (2^1)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		0.923077
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 4 (2^2)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		0.140696
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 8 (2^3)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		0.768206
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 16 (2^4)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		0.988406
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 32 (2^5)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		0.709613
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 64 (2^6)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		0.926324
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 128 (2^7)
+
+ mergesort serial 	0.01 Mcycles
+
+ mergesort parallel 	0.01 Mcycles
+
+ Speedup: 		0.902895
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 256 (2^8)
+
+ mergesort serial 	0.01 Mcycles
+
+ mergesort parallel 	0.01 Mcycles
+
+ Speedup: 		2.064468
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 512 (2^9)
+
+ mergesort serial 	0.01 Mcycles
+
+ mergesort parallel 	0.01 Mcycles
+
+ Speedup: 		1.019791
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 1024 (2^10)
+
+ mergesort serial 	0.05 Mcycles
+
+ mergesort parallel 	0.03 Mcycles
+
+ Speedup: 		1.615951
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 2048 (2^11)
+
+ mergesort serial 	0.06 Mcycles
+
+ mergesort parallel 	0.07 Mcycles
+
+ Speedup: 		0.809493
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 4096 (2^12)
+
+ mergesort serial 	0.22 Mcycles
+
+ mergesort parallel 	0.22 Mcycles
+
+ Speedup: 		1.003614
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 8192 (2^13)
+
+ mergesort serial 	1.06 Mcycles
+
+ mergesort parallel 	0.65 Mcycles
+
+ Speedup: 		1.623344
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 16384 (2^14)
+
+ mergesort serial 	0.62 Mcycles
+
+ mergesort parallel 	0.55 Mcycles
+
+ Speedup: 		1.114838
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 32768 (2^15)
+
+ mergesort serial 	1.63 Mcycles
+
+ mergesort parallel 	1.30 Mcycles
+
+ Speedup: 		1.256285
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 65536 (2^16)
+
+ mergesort serial 	3.93 Mcycles
+
+ mergesort parallel 	2.39 Mcycles
+
+ Speedup: 		1.645536
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 131072 (2^17)
+
+ mergesort serial 	6.66 Mcycles
+
+ mergesort parallel 	5.03 Mcycles
+
+ Speedup: 		1.323110
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 262144 (2^18)
+
+ mergesort serial 	31.14 Mcycles
+
+ mergesort parallel 	20.07 Mcycles
+
+ Speedup: 		1.551337
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 524288 (2^19)
+
+ mergesort serial 	27.09 Mcycles
+
+ mergesort parallel 	24.72 Mcycles
+
+ Speedup: 		1.095730
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 1048576 (2^20)
+
+ mergesort serial 	62.35 Mcycles
+
+ mergesort parallel 	71.06 Mcycles
+
+ Speedup: 		0.877380
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 2097152 (2^21)
+
+ mergesort serial 	122.11 Mcycles
+
+ mergesort parallel 	117.75 Mcycles
+
+ Speedup: 		1.037037
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 4194304 (2^22)
+
+ mergesort serial 	273.77 Mcycles
+
+ mergesort parallel 	276.18 Mcycles
+
+ Speedup: 		0.991285
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 8388608 (2^23)
+
+ mergesort serial 	589.65 Mcycles
+
+ mergesort parallel 	545.85 Mcycles
+
+ Speedup: 		1.080249
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 16777216 (2^24)
+
+ mergesort serial 	1464.50 Mcycles
+
+ mergesort parallel 	1429.15 Mcycles
+
+ Speedup: 		1.024734
+================================================
+
+================================================
+ Max number of threads: 4 
+ --> Sorting an array of size 33554432 (2^25)
+
+ mergesort serial 	3609.89 Mcycles
+
+ mergesort parallel 	3396.33 Mcycles
+
+ Speedup: 		1.062879
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 2 (2^1)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		1.000000
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 4 (2^2)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		0.631222
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 8 (2^3)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		0.607973
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 16 (2^4)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		0.461092
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 32 (2^5)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		1.009582
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 64 (2^6)
+
+ mergesort serial 	0.01 Mcycles
+
+ mergesort parallel 	0.01 Mcycles
+
+ Speedup: 		1.057622
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 128 (2^7)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		1.336533
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 256 (2^8)
+
+ mergesort serial 	0.01 Mcycles
+
+ mergesort parallel 	0.01 Mcycles
+
+ Speedup: 		1.047288
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 512 (2^9)
+
+ mergesort serial 	0.01 Mcycles
+
+ mergesort parallel 	0.01 Mcycles
+
+ Speedup: 		0.997943
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 1024 (2^10)
+
+ mergesort serial 	0.03 Mcycles
+
+ mergesort parallel 	0.03 Mcycles
+
+ Speedup: 		1.003433
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 2048 (2^11)
+
+ mergesort serial 	0.29 Mcycles
+
+ mergesort parallel 	0.26 Mcycles
+
+ Speedup: 		1.104710
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 4096 (2^12)
+
+ mergesort serial 	0.19 Mcycles
+
+ mergesort parallel 	0.19 Mcycles
+
+ Speedup: 		0.992780
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 8192 (2^13)
+
+ mergesort serial 	0.39 Mcycles
+
+ mergesort parallel 	0.48 Mcycles
+
+ Speedup: 		0.812978
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 16384 (2^14)
+
+ mergesort serial 	0.54 Mcycles
+
+ mergesort parallel 	0.51 Mcycles
+
+ Speedup: 		1.061458
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 32768 (2^15)
+
+ mergesort serial 	1.10 Mcycles
+
+ mergesort parallel 	1.04 Mcycles
+
+ Speedup: 		1.059092
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 65536 (2^16)
+
+ mergesort serial 	6.79 Mcycles
+
+ mergesort parallel 	7.56 Mcycles
+
+ Speedup: 		0.898103
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 131072 (2^17)
+
+ mergesort serial 	4.85 Mcycles
+
+ mergesort parallel 	4.78 Mcycles
+
+ Speedup: 		1.015267
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 262144 (2^18)
+
+ mergesort serial 	10.83 Mcycles
+
+ mergesort parallel 	10.65 Mcycles
+
+ Speedup: 		1.017316
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 524288 (2^19)
+
+ mergesort serial 	27.97 Mcycles
+
+ mergesort parallel 	23.32 Mcycles
+
+ Speedup: 		1.199506
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 1048576 (2^20)
+
+ mergesort serial 	56.01 Mcycles
+
+ mergesort parallel 	52.37 Mcycles
+
+ Speedup: 		1.069491
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 2097152 (2^21)
+
+ mergesort serial 	139.22 Mcycles
+
+ mergesort parallel 	115.41 Mcycles
+
+ Speedup: 		1.206383
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 4194304 (2^22)
+
+ mergesort serial 	259.05 Mcycles
+
+ mergesort parallel 	274.93 Mcycles
+
+ Speedup: 		0.942240
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 8388608 (2^23)
+
+ mergesort serial 	589.61 Mcycles
+
+ mergesort parallel 	549.26 Mcycles
+
+ Speedup: 		1.073462
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 16777216 (2^24)
+
+ mergesort serial 	1259.58 Mcycles
+
+ mergesort parallel 	1204.74 Mcycles
+
+ Speedup: 		1.045512
+================================================
+
+================================================
+ Max number of threads: 2 
+ --> Sorting an array of size 33554432 (2^25)
+
+ mergesort serial 	3391.36 Mcycles
+
+ mergesort parallel 	3273.40 Mcycles
+
+ Speedup: 		1.036037
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 2 (2^1)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		1.000000
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 4 (2^2)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		0.522222
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 8 (2^3)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		0.814126
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 16 (2^4)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		0.532875
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 32 (2^5)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		0.987106
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 64 (2^6)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		0.864930
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 128 (2^7)
+
+ mergesort serial 	0.00 Mcycles
+
+ mergesort parallel 	0.00 Mcycles
+
+ Speedup: 		1.005604
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 256 (2^8)
+
+ mergesort serial 	0.01 Mcycles
+
+ mergesort parallel 	0.01 Mcycles
+
+ Speedup: 		1.115752
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 512 (2^9)
+
+ mergesort serial 	0.01 Mcycles
+
+ mergesort parallel 	0.01 Mcycles
+
+ Speedup: 		1.030298
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 1024 (2^10)
+
+ mergesort serial 	0.06 Mcycles
+
+ mergesort parallel 	0.08 Mcycles
+
+ Speedup: 		0.819853
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 2048 (2^11)
+
+ mergesort serial 	0.06 Mcycles
+
+ mergesort parallel 	0.06 Mcycles
+
+ Speedup: 		0.971019
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 4096 (2^12)
+
+ mergesort serial 	0.40 Mcycles
+
+ mergesort parallel 	0.40 Mcycles
+
+ Speedup: 		0.999291
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 8192 (2^13)
+
+ mergesort serial 	0.24 Mcycles
+
+ mergesort parallel 	0.30 Mcycles
+
+ Speedup: 		0.815413
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 16384 (2^14)
+
+ mergesort serial 	1.04 Mcycles
+
+ mergesort parallel 	1.07 Mcycles
+
+ Speedup: 		0.979939
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 32768 (2^15)
+
+ mergesort serial 	1.08 Mcycles
+
+ mergesort parallel 	1.20 Mcycles
+
+ Speedup: 		0.901454
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 65536 (2^16)
+
+ mergesort serial 	4.38 Mcycles
+
+ mergesort parallel 	2.44 Mcycles
+
+ Speedup: 		1.791142
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 131072 (2^17)
+
+ mergesort serial 	13.09 Mcycles
+
+ mergesort parallel 	7.15 Mcycles
+
+ Speedup: 		1.831005
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 262144 (2^18)
+
+ mergesort serial 	13.45 Mcycles
+
+ mergesort parallel 	10.98 Mcycles
+
+ Speedup: 		1.225381
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 524288 (2^19)
+
+ mergesort serial 	30.51 Mcycles
+
+ mergesort parallel 	25.81 Mcycles
+
+ Speedup: 		1.182086
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 1048576 (2^20)
+
+ mergesort serial 	72.20 Mcycles
+
+ mergesort parallel 	63.43 Mcycles
+
+ Speedup: 		1.138304
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 2097152 (2^21)
+
+ mergesort serial 	123.76 Mcycles
+
+ mergesort parallel 	132.05 Mcycles
+
+ Speedup: 		0.937191
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 4194304 (2^22)
+
+ mergesort serial 	259.55 Mcycles
+
+ mergesort parallel 	275.54 Mcycles
+
+ Speedup: 		0.941998
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 8388608 (2^23)
+
+ mergesort serial 	595.25 Mcycles
+
+ mergesort parallel 	549.85 Mcycles
+
+ Speedup: 		1.082573
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 16777216 (2^24)
+
+ mergesort serial 	1231.07 Mcycles
+
+ mergesort parallel 	1190.77 Mcycles
+
+ Speedup: 		1.033845
+================================================
+
+================================================
+ Max number of threads: 16 
+ --> Sorting an array of size 33554432 (2^25)
+
+ mergesort serial 	3553.85 Mcycles
+
+ mergesort parallel 	3319.33 Mcycles
+
+ Speedup: 		1.070653
+================================================
+

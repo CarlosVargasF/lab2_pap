@@ -103,6 +103,39 @@ void parallel_merge_sort (uint64_t *T, const uint64_t size)
 {
     /* TODO: parallel implementation of merge sort */
 
+    uint64_t temp;
+
+    // When only 2 elements remain
+    if(size==2)
+    {
+      // Swap elements if required
+      if(T[1] < T[0])
+      {
+        temp = T[1];
+        T[1] = T[0];
+        T[0] = temp;
+        return;
+      }
+      else
+      {
+        return;
+      }
+    }
+
+    // Divide into equal halves
+
+    #pragma omp task
+    sequential_merge_sort(T, size/2);
+    #pragma omp task
+    sequential_merge_sort(T+size/2, size/2);
+
+
+    // Merge the halves
+
+    #pragma omp taskwait
+    merge(T, size/2);
+
+
     return;
 }
 
@@ -112,6 +145,9 @@ int main (int argc, char **argv)
     uint64_t start, end;
     uint64_t av ;
     unsigned int exp ;
+
+    printf("================================================\n");
+    printf(" Max number of threads: %d \n", omp_get_max_threads());
 
     /* the program takes one parameter N which is the size of the array to
        be sorted. The array will have size 2^N */
@@ -125,57 +161,59 @@ int main (int argc, char **argv)
     /* the array to be sorted */
     uint64_t *X = (uint64_t *) malloc (N * sizeof(uint64_t)) ;
 
-    printf("--> Sorting an array of size %lu\n",N);
-#ifdef RINIT
-    printf("--> The array is initialized randomly\n");
-#endif
+    printf(" --> Sorting an array of size %lu (2^%u)\n", N, atoi(argv[1]));
+    #ifdef RINIT
+      printf("--> The array is initialized randomly\n");
+    #endif
     
 
-    for (exp = 0 ; exp < NBEXPERIMENTS; exp++){
-#ifdef RINIT
-        init_array_random (X, N);
-#else
-        init_array_sequence (X, N);
-#endif
+    for (exp = 0 ; exp < NBEXPERIMENTS; exp++)
+    {
+        #ifdef RINIT
+            init_array_random (X, N);
+        #else
+            init_array_sequence (X, N);
+        #endif
+            
         
-      
         start = _rdtsc () ;
         
         sequential_merge_sort (X, N) ;
-     
+        
         end = _rdtsc () ;
         experiments [exp] = end - start ;
 
         /* verifying that X is properly sorted */
-#ifdef RINIT
+        #ifdef RINIT
         if (! is_sorted (X, N))
         {
             fprintf(stderr, "ERROR: the sequential sorting of the array failed\n") ;
             print_array (X, N) ;
             exit (-1) ;
-	}
-#else
+        }
+        #else
         if (! is_sorted_sequence (X, N))
         {
             fprintf(stderr, "ERROR: the sequential sorting of the array failed\n") ;
             print_array (X, N) ;
             exit (-1) ;
-	}
-#endif
+        }
+        #endif
     }
 
     av = average_time() ;  
 
-    printf ("\n mergesort serial \t\t\t %.2lf Mcycles\n\n", (double)av/1000000) ;
+    double serial_cycles = (double)av/1000000;
+    printf ("\n mergesort serial \t%.2lf Mcycles\n\n", serial_cycles) ;
 
   
     for (exp = 0 ; exp < NBEXPERIMENTS; exp++)
     {
-#ifdef RINIT
-        init_array_random (X, N);
-#else
-        init_array_sequence (X, N);
-#endif
+        #ifdef RINIT
+                init_array_random (X, N);
+        #else
+                init_array_sequence (X, N);
+        #endif
         
         start = _rdtsc () ;
 
@@ -185,37 +223,42 @@ int main (int argc, char **argv)
         experiments [exp] = end - start ;
 
         /* verifying that X is properly sorted */
-#ifdef RINIT
+        #ifdef RINIT
         if (! is_sorted (X, N))
         {
             fprintf(stderr, "ERROR: the parallel sorting of the array failed\n") ;
             exit (-1) ;
-	}
-#else
+	    }
+        #else
         if (! is_sorted_sequence (X, N))
         {
             fprintf(stderr, "ERROR: the parallel sorting of the array failed\n") ;
             exit (-1) ;
-	}
-#endif
+        }
+        #endif
                 
-        
     }
     
     av = average_time() ;  
-    printf ("\n mergesort parallel \t\t %.2lf Mcycles\n\n", (double)av/1000000) ;
-  
+    double parallel_cycles = (double)av/1000000;
+    printf (" mergesort parallel \t%.2lf Mcycles\n\n", (double)av/1000000) ;
+    
+    FILE *f = fopen("speedups.txt", "a+w");
+
+    printf(" Speedup: \t\t%f\n", serial_cycles/parallel_cycles);
+    fprintf(f, "%f\n", serial_cycles/parallel_cycles);
+
     /* print_array (X, N) ; */
 
     /* before terminating, we run one extra test of the algorithm */
     uint64_t *Y = (uint64_t *) malloc (N * sizeof(uint64_t)) ;
     uint64_t *Z = (uint64_t *) malloc (N * sizeof(uint64_t)) ;
 
-#ifdef RINIT
-    init_array_random (Y, N);
-#else
-    init_array_sequence (Y, N);
-#endif
+    #ifdef RINIT
+        init_array_random (Y, N);
+    #else
+        init_array_sequence (Y, N);
+    #endif
 
     memcpy(Z, Y, N * sizeof(uint64_t));
 
@@ -231,5 +274,7 @@ int main (int argc, char **argv)
     free(X);
     free(Y);
     free(Z);
+
+    printf("================================================\n\n");
     
 }
