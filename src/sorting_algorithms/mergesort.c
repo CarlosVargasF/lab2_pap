@@ -101,7 +101,7 @@ void sequential_merge_sort (uint64_t *T, const uint64_t size)
 
 void parallel_merge_sort (uint64_t *T, const uint64_t size)
 {
-    /* TODO: parallel implementation of merge sort */
+    /* parallel implementation of merge sort */
 
     uint64_t temp;
 
@@ -129,12 +129,13 @@ void parallel_merge_sort (uint64_t *T, const uint64_t size)
     #pragma omp task
     sequential_merge_sort(T+size/2, size/2);
 
+  
 
     // Merge the halves
 
     #pragma omp taskwait
     merge(T, size/2);
-
+   
 
     return;
 }
@@ -216,9 +217,16 @@ int main (int argc, char **argv)
         #endif
         
         start = _rdtsc () ;
-
-        parallel_merge_sort (X, N) ;
-     
+        #pragma omp parallel
+        {
+          #pragma omp single
+          {
+            parallel_merge_sort (X, N) ;
+            // printf("Hemnlo!\n");
+          }
+        }
+        
+        
         end = _rdtsc () ;
         experiments [exp] = end - start ;
 
@@ -233,6 +241,7 @@ int main (int argc, char **argv)
         if (! is_sorted_sequence (X, N))
         {
             fprintf(stderr, "ERROR: the parallel sorting of the array failed\n") ;
+            print_array (X, N);
             exit (-1) ;
         }
         #endif
