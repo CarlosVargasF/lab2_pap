@@ -12,7 +12,15 @@
    odd-even sort -- sequential, parallel -- 
 */
 
+/* This is basically the same structure of Bubble sort, the main difference is 
+the step=2 in the For loops. In the 1st stage, we swap (if necessary) every 
+element in an odd position with the next one. In the 2nd one, we dp the same with
+every element in even pos.
+*/
 
+/*This implementation allows to do that in one For loop using startIndex to
+interleave between odds and evens.
+*/
 void sequential_oddeven_sort (uint64_t *T, const uint64_t size)
 {
     /* TODO: sequential implementation of odd-even sort */
@@ -51,6 +59,7 @@ void parallel_oddeven_sort (uint64_t *T, const uint64_t size)
     do
     {
         sorted = 1;
+	/*We split the array in chunks and try to swap odds-possitioned elems inside each chunk with threads*/    
         #pragma omp parallel for private(temp)
         for(i = 0; i < size-1; i+=2)
         {
@@ -63,7 +72,7 @@ void parallel_oddeven_sort (uint64_t *T, const uint64_t size)
                 sorted = 0;
             }
         }
-
+	/*When all prevouis threads have finished, try to swap even-pos elems inside same chunk partitions*/
         #pragma omp parallel for private(temp)
         for(i = 1; i < size-1; i+=2)
         {
