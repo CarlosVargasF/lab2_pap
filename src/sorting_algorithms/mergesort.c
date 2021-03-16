@@ -99,7 +99,7 @@ void sequential_merge_sort (uint64_t *T, const uint64_t size)
     return ;
 }
 
-void parallel_merge_sort (uint64_t *T, const uint64_t size)
+void parallel_merge_sort (uint64_t *T, const uint64_t size, int threads)
 {
     /* parallel implementation of merge sort */
 
@@ -122,24 +122,41 @@ void parallel_merge_sort (uint64_t *T, const uint64_t size)
       }
     }
 
-    // Divide into equal halves
+    if(threads == 1)
+    {
+      sequential_merge_sort(T, size);
+    }
+    else if(threads >= 2)
+    {
+      // Divide into equal halves
 
-    #pragma omp task
-    sequential_merge_sort(T, size/2);
-    #pragma omp task
-    sequential_merge_sort(T+size/2, size/2);
+      // #pragma omp parallel
+      {
+        // #pragma omp single
+        {
+          #pragma omp task
+          parallel_merge_sort(T, size/2,  threads/2);
+          #pragma omp task
+          parallel_merge_sort(T+size/2, size/2, threads/2);
+        }
+      }
 
-  
+      // Merge the halves
 
-    // Merge the halves
+      #pragma omp taskwait
+      merge(T, size/2);
+    }
 
-    #pragma omp taskwait
-    merge(T, size/2);
-   
 
     return;
 }
 
+void parallel_merge_sort_v2 (uint64_t *T, const uint64_t size)
+{
+  /* Optimized version of merge sort */
+
+
+}
 
 int main (int argc, char **argv)
 {
@@ -221,7 +238,7 @@ int main (int argc, char **argv)
         {
           #pragma omp single
           {
-            parallel_merge_sort (X, N) ;
+            parallel_merge_sort (X, N, omp_get_max_threads()) ;
             // printf("Hemnlo!\n");
           }
         }
@@ -272,7 +289,7 @@ int main (int argc, char **argv)
     memcpy(Z, Y, N * sizeof(uint64_t));
 
     sequential_merge_sort (Y, N) ;
-    parallel_merge_sort (Z, N) ;
+    parallel_merge_sort (Z, N, omp_get_max_threads()) ;
 
     if (! are_vector_equals (Y, Z, N)) {
         fprintf(stderr, "ERROR: sorting with the sequential and the parallel algorithm does not give the same result\n") ;
