@@ -109,7 +109,9 @@ int main (int argc, char **argv)
     /* the array to be sorted */
     uint64_t *X = (uint64_t *) malloc (N * sizeof(uint64_t)) ;
 
-    printf("--> Sorting an array of size %u\n",N);
+    printf("================================================\n");
+    printf(" Max number of threads: %d \n", omp_get_max_threads());    
+    printf(" --> Sorting an array of size %lu (2^%u)\n", N, atoi(argv[1]));
 #ifdef RINIT
     printf("--> The array is initialized randomly\n");
 #endif
@@ -150,7 +152,8 @@ int main (int argc, char **argv)
 
     av = average_time() ;  
 
-    printf ("\n odd-even serial \t\t\t %.2lf Mcycles\n\n", (double)av/1000000) ;
+    double serial_cycles = (double)av/1000000;
+    printf ("\n odd-even serial \t\t\t %.2lf Mcycles\n", (double)av/1000000) ;
 
   
     for (exp = 0 ; exp < NBEXPERIMENTS; exp++)
@@ -188,7 +191,14 @@ int main (int argc, char **argv)
     }
     
     av = average_time() ;  
+
+    double parallel_cycles = (double)av/1000000;
     printf ("\n odd-even parallel \t\t %.2lf Mcycles\n\n", (double)av/1000000) ;
+
+    FILE *f = fopen("speedups_odd.txt", "a+w");
+
+    printf(" Speedup: \t\t%f\n", serial_cycles/parallel_cycles);
+    fprintf(f, "%f\n", serial_cycles/parallel_cycles);
   
     /* print_array (X, N) ; */
 
@@ -217,4 +227,5 @@ int main (int argc, char **argv)
     free(Y);
     free(Z);
     
+    printf("================================================\n\n");
 }
